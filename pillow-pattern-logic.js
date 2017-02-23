@@ -89,11 +89,16 @@ function UpdateOutput()
 	document.querySelector('#case-fabric-height').innerHTML = pillowFabricHeight();
 }
 
-function btn_computePattern_click(e)
+function Update()
 {
 	PatternData = GetData();
 
 	UpdateOutput();
+}
+
+function btn_computePattern_click(e)
+{
+	Update();
 }
 
 document.onreadystatechange = function(e)
@@ -101,7 +106,7 @@ document.onreadystatechange = function(e)
     if (document.readyState === 'complete')
     {
     	// load the pattern data with initial values
-    	var PatternData = GetData();
+    	Update();
 
     	document.querySelector('#btn_compute-pattern')
     			.addEventListener('click', btn_computePattern_click);
