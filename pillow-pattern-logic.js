@@ -87,6 +87,18 @@ function UpdateOutput()
 	document.querySelector('#pillow-fabric-height').innerHTML = pillowFabricHeight();
 	document.querySelector('#case-fabric-width').innerHTML = caseFabricWidth();
 	document.querySelector('#case-fabric-height').innerHTML = pillowFabricHeight();
+
+	document.querySelectorAll(".hem-size")
+			.forEach(element =>
+				element.innerHTML = PatternData.flapHemSize);
+
+	document.querySelectorAll(".top-flap-size")
+			.forEach(element =>
+				element.innerHTML = PatternData.topFlapWidth);
+
+	document.querySelectorAll(".bottom-flap-size")
+			.forEach(element =>
+				element.innerHTML = PatternData.width - PatternData.topFlapWidth + PatternData.flapOverlap)
 }
 
 function Update()
