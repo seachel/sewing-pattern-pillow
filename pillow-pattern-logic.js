@@ -83,10 +83,21 @@ function caseFabricWidth()
 
 function UpdateOutput()
 {
-	document.querySelector('#pillow-fabric-width').innerHTML = pillowFabricWidth();
-	document.querySelector('#pillow-fabric-height').innerHTML = pillowFabricHeight();
-	document.querySelector('#case-fabric-width').innerHTML = caseFabricWidth();
-	document.querySelector('#case-fabric-height').innerHTML = pillowFabricHeight();
+	document.querySelectorAll('.pillow-fabric-width')
+			.forEach(element =>
+				element.innerHTML = pillowFabricWidth());
+
+	document.querySelectorAll('.pillow-fabric-height')
+			.forEach(element =>
+				element.innerHTML = pillowFabricHeight());
+
+	document.querySelectorAll('.case-fabric-width')
+			.forEach(element => 
+				element.innerHTML = caseFabricWidth());
+
+	document.querySelectorAll('.case-fabric-height')
+			.forEach(element =>
+				element.innerHTML = pillowFabricHeight());
 
 	document.querySelectorAll(".hem-size")
 			.forEach(element =>

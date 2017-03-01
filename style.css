@@ -1,32 +1,80 @@
+/*------------*/
+/* Base Rules */
+/*------------*/
+
+html, form { margin: 0; padding: 0; }
+
 body
 {
-	/*font-family: 'Arsenal', sans-serif;*/
-	font-family: 'Slabo 27px', serif;
-	/*font-family: 'Playfair Display', serif;*/
-	font-size: 24px;
-	padding: 0px;
-	margin: 0px;
+	padding: 0;
+	margin: 0;
+	background-color: white;
 }
 
-h1
+input[type=text]
 {
+	border: 1px solid #999;
+}
+
+a { color: #093; }
+a:hover {color: #03C; }
+
+/* TODO: style select/option elements, buttons */
+
+input[type=button]
+{
+	background-color: #9999FF;
+	border: solid 2px #330066;
+	padding: 10px;
+	font-family: 'Slabo 27px', serif;
+	font-size: 24px;
+}
+
+/*--------------*/
+/* Layout Rules */
+/*--------------*/
+
+#header
+{
+	padding: 10px 0;
 	font-family: 'Lobster Two', cursive;
 	font-weight: normal;
 	text-align: center;
 }
 
-div
+#main-content
+{
+	max-width: 800px;
+	margin: auto;
+	font-family: 'Slabo 27px', serif;
+	font-size: 24px;
+}
+
+.l-pattern-input
 {
 	padding: 10px 0;
 }
 
-.container
+.l-pattern-output
 {
-	max-width: 800px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: white;
-	padding: 20px;
+	padding: 10px 0;
 }
 
-.hide { display: none; }
+
+/*--------------*/
+/* Module Rules */
+/*--------------*/
+
+.pattern-input-variable,
+.pattern-input-instruction,
+.pattern-output-instruction
+{
+	padding: 10px 0;
+}
+
+
+/*-------------*/
+/* State Rules */
+/*-------------*/
+
+.is-hidden { display: none; }
